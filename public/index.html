@@ -1,0 +1,44 @@
+﻿<!doctype html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Message App</title>
+        <meta name="viewport" content="width=device-width">
+       
+        <link rel="stylesheet" href="styles/Main.css">         
+        
+        <script src="scripts/libs/jquery-1.9.1.min.js"></script>
+        <script src="scripts/libs/underscore-min.js"></script>       
+        
+        <script src="scripts/ModelMessage.js"></script>
+        <script src="scripts/ViewMessage.js"></script>
+        <script src="scripts/ViewApp.js"></script> 
+        <script src="scripts/Run.js"></script>
+        
+        <script type = "text/template" id = "message-tpl">          
+            <p class = "from"> From: <%=from%> </p> 
+            <p class = "date"> <%=created_at%> </p> 
+            <p class = "subject"> <%=subject%> </p> 
+            <p class = "text"> <%=text%></p>                          
+        </script>
+        
+        <script type = "text/template" id = "messageshow-tpl">    
+            <div class = "open-message">              
+                <p> <p1> Message from:</p1> <%=from%> </p> 
+                <p> <p1> Message subject:</p1> <%=subject%> </p>  <hr>
+                <p> <%=text%></p>
+                <p> <p1> Message Date:</p1><%=created_at%> </p> 
+                <input type="button" id = "btn-close-message" value="Close Message">             
+            </div>        
+        </script>        
+    </head>
+    
+    <body>   
+        
+        <div id = "app-container">
+            <h1>Incoming messages</h1>           
+        </div>  
+        
+</body>
+</html>
